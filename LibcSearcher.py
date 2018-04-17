@@ -68,7 +68,7 @@ class LibcSearcher(object):
                     break
                 except:
                     continue
-        self.db = result[0]
+        #self.db = result[0]      // user choose options , whatever user chooses , it will be  the fist choice
         print "[+] %s be choosed." % self.pmore(self.db)
 
     def pmore(self, result):
