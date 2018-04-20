@@ -52,7 +52,7 @@ class LibcSearcher(object):
             print "No matched libc, please add more libc or try others"
             sys.exit(0)
 
-        if len(result) > 1:
+        if len(result) >= 1:
             print "Multi Results:"
             for x in range(len(result)):
                 print "%2d: %s" % (x, self.pmore(result[x]))
@@ -68,7 +68,7 @@ class LibcSearcher(object):
                     break
                 except:
                     continue
-        self.db = result[0]
+        #self.db = result[0]
         print "[+] %s be choosed." % self.pmore(self.db)
 
     def pmore(self, result):
